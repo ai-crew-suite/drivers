@@ -61,7 +61,7 @@
     "@ai-crew-suite/plugin-kernel-node": "workspace:^",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/integration": "backstage:^",
-    "azure-devops-node-api": "^17.0.0"
+    "azure-devops-node-api": "^17.0.1"
   },
   "devDependencies": {
     "@ai-crew-suite/cli": "workspace:*",

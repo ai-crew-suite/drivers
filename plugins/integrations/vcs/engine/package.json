@@ -64,7 +64,7 @@
     "@backstage/plugin-scaffolder-node": "backstage:^",
     "@gitbeaker/rest": "^43.8.0",
     "@octokit/rest": "^22.0.1",
-    "azure-devops-node-api": "17.0.0",
+    "azure-devops-node-api": "17.0.1",
     "git-url-parse": "^16.1.0",
     "node-fetch": "^3.3.2"
   },

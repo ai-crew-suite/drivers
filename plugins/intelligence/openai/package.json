@@ -61,7 +61,7 @@
     "@backstage/catalog-client": "backstage:^",
     "@backstage/config": "backstage:^",
     "@langchain/core": "catalog:langchain-core",
-    "@langchain/openai": "^1.5.12",
+    "@langchain/openai": "^1.5.13",
     "i18next": "catalog:i18next"
   },
   "devDependencies": {

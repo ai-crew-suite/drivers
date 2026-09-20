@@ -58,7 +58,7 @@
     "@ai-crew-suite/plugin-kernel-node": "workspace:^",
     "@ai-crew-suite/plugin-retrieval-augmenter-backend": "workspace:^",
     "@ai-crew-suite/plugin-vector-store-pgvector": "workspace:^",
-    "@aws-sdk/client-bedrock-runtime": "^3.1130.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.1134.0",
     "@aws-sdk/types": "^3.974.5",
     "@backstage/backend-common": "catalog:backstage-backend-common",
     "@backstage/backend-plugin-api": "backstage:^",

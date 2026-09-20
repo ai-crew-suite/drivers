@@ -55,7 +55,7 @@
   "dependencies": {
     "@ai-crew-suite/plugin-kernel-node": "workspace:^",
     "@azure/arm-resources": "^8.0.0",
-    "@azure/identity": "^4.13.2",
+    "@azure/identity": "^4.13.3",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/config": "backstage:^"
   },
