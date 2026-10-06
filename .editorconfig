@@ -1,0 +1,35 @@
+# EditorConfig root marker - tells linters not to look further up the directory tree
+root = true
+
+# Global defaults for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Target TypeScript, JavaScript, and JSON Configurations
+[*.{ts,tsx,js,jsx,json}]
+indent_style = space
+indent_size = 2
+quote_type = single
+
+# Strict formatting parameters for YAML (Backstage catalog-info & GitHub Actions workflow configurations)
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+# Turning off final newlines for YAML prevents accidental parser warnings in strict engines
+insert_final_newline = false
+
+# Keep Markdown documentation clean and readable for humans and LLM agents
+[*.md]
+indent_style = space
+indent_size = 2
+# Set max line length to prevent long horizontal string scrolls in text terminals
+max_line_length = 120
+# Do NOT trim trailing whitespace in markdown because double spaces represent explicit line breaks
+trim_trailing_whitespace = false
+insert_final_newline = true

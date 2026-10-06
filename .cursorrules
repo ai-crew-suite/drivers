@@ -1,0 +1,9 @@
+# Cross-Tool Agent Rules
+
+Analyze the code by pulling the shared rules from the local files below into your memory layout:
+
+- .ai-rules/prompts/general-instructions.md
+- .ai-rules/prompts/frontend-app.instructions.md
+- .ai-rules/prompts/jsdoc-guidelines.md
+- .ai-rules/prompts/plugin-registration.md
+- .ai-rules/prompts/storybook.instructions.md

@@ -1,0 +1,12 @@
+# Internal Tech Jargon
+backstage
+techdocs
+scaffolder
+
+# Organization Acronyms
+ai-crew-suite
+
+# Custom Code Entities
+useAsyncFn
+entityRef
+apiVersion

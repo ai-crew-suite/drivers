@@ -2,37 +2,19 @@ name: Workspace Guardrails
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
   lint-monorepo-namespaces:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Codebase
+      - name: 📂 Checkout Application Source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Initialize Node.js for Yarn Scripts
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: "22"
-          cache: "yarn"
-
-      - name: Initialize Python Runtime
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
-        with:
-          python-version: "3.11"
-          cache: "pip"
-          cache-dependency-path: "requirements.txt"
-
-      - name: Setup Python Virtual Environment
-        run: yarn venv:setup
-
-      - name: Run Script Self-Tests
-        run: .venv/bin/python -m pytest .github/actions
-
-      - name: Validate Package Naming Structures
-        run: .venv/bin/python .github/actions/check_architecture/__tests__/test_main.py/src/main.py
+      - name: 🔍 Execute Centralized Architecture Audit
+        uses: ai-crew-suite/pipelines/lint-architecture@v1

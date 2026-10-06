@@ -1,0 +1,27 @@
+name: Global Release Track
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  id-token: write # 🔒 CRITICAL: Required for automated NPM package provenance signatures
+
+jobs:
+  publish-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Checkout Repository Codebase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🚀 Run Central Publish & Release Engine
+        uses: ai-crew-suite/pipelines/publish-package@v1
+        with:
+          node-version: "22"
+          npm-auth-token: ${{ secrets.NPM_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}

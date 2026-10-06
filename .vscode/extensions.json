@@ -1,7 +1,24 @@
 {
   "recommendations": [
+    // --- Core Architecture & Monorepo ---
     "arcanis.vscode-zipfs",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "dzemanov.vscode-backstage-configuration",
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions",     // Native GitHub Actions syntax checking
+    "vercel.turbo",                     // Visualizes execution graphs & caches for Turborepo
+
+    // --- Spotify Backstage & Data Layouts ---
+    "redhat.vscode-yaml",               // Required to parse the yaml.schemas definitions
+    "redhat.vscode-xml",                // Helpful for Backstage's underlying data structures
+
+    // --- Temporal & Agentic Workflow Engineering ---
+    "temporal.temporal-vscode",         // Official extension for tracking local Temporal clusters
+    "humao.rest-client",                // Instant API testing for LLMs/Meme0 graph endpoints via files
+
+    // --- Data & Vector Databases (pgvector / Qdrant) ---
+    "mtxr.sqltools",                    // Universal DB interface
+    "mtxr.sqltools-driver-pg",          // Dedicated PostgreSQL driver for testing pgvector queries
+    "qdrant.qdrant-vscode"              // Visual exploration of vectors and collection payloads
   ]
 }

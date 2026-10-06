@@ -1,0 +1,23 @@
+name: Check Bump Versions for Backstagte Core
+
+on:
+  schedule:
+    - cron: "0 6 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Checkout Repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: 🚀 Run Centralized Upstream Upgrade Check
+        uses: ai-crew-suite/pipelines/check-backstage-dependency-version@v1
+        with:
+          workflow-github-token: ${{ secrets.WORKFLOW_GITHUB_TOKEN }}

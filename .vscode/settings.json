@@ -1,96 +1,36 @@
 {
-  "cSpell.words": [
-    "Accum",
-    "actioned",
-    "agentic",
-    "AKIA",
-    "arounds",
-    "azdev",
-    "azuredevops",
-    "baprs",
-    "Contextualizer",
-    "creds",
-    "demultiplexing",
-    "ehthumbs",
-    "entitites",
-    "exfiltration",
-    "Fazure",
-    "FINRA",
-    "glpat",
-    "hdrs",
-    "healthz",
-    "HITL",
-    "IDOR",
-    "Ilshidur",
-    "incidentio",
-    "jsdom",
-    "llms",
-    "Milvus",
-    "msgpackr",
-    "nektos",
-    "nvmrc",
-    "Ollama",
-    "oncalls",
-    "oriflame",
-    "ossp",
-    "PABC",
-    "pgvector",
-    "PINC",
-    "PNOTE",
-    "PPOL",
-    "PPRI",
-    "PSVC",
-    "PTEAM",
-    "PUSR",
-    "pylint",
-    "Qdrant",
-    "repudiable",
-    "rerank",
-    "Reranker",
-    "rerankers",
-    "rharkor",
-    "rjsf",
-    "roadiehq",
-    "SCAF",
-    "scoree",
-    "smhd",
-    "sonarqube",
-    "SPOF",
-    "stringifying",
-    "unbuilt",
-    "uncited",
-    "uncompiled",
-    "unconfigured",
-    "unestimated",
-    "ungated",
-    "unparseable",
-    "unposted",
-    "unredacted",
-    "Unrouted",
-    "unsourced",
-    "untimed",
-    "upserts",
-    "Vercel",
-    "westus",
-    "xlarge",
-    "xoxb",
-    "xoxp",
-    "zipfs"
+  "cSpell.customDictionaries": {
+    "org-words": {
+      "path": "./.cspell/shared.txt",
+      "addWords": false
+    }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "json.schemas": [
+    {
+      "fileMatch": [".yarnrc.yml"],
+      "url": "https://yarnpkg.com/configuration/yarnrc.json"
+    }
   ],
+  "json.schemaDownload.trustedDomains": {
+    "https://*.turborepo.dev": true
+  },
   "search.exclude": {
     "**/.yarn": true,
-    "**/.pnp.*": true
+    "**/node_modules": true,
+    "**/.turbo": true,
+    "**/dist": true,
+    "**/.cache": true,
+    "**/coverage": true
   },
-  "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
-  "js/ts.tsdk.path": ".yarn/sdks/typescript/lib",
-  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
   "yaml.schemas": {
-    "https://backstage.io": "app-config*.yaml"
+    "https://json.schemastore.org/catalog-info.json": [
+      "**/catalog-info.yaml",
+      "master-catalogs.yml"
+    ]
   },
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "chat.instructionsFilesLocations": {
-    ".vscode/instructions": true
-  }
+  "yaml.validate": true
 }

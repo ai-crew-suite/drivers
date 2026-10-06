@@ -95,7 +95,7 @@ find . -type f -exec sed -i 's|https://github.com/ai-crew-suite|https://github.c
 {
   "name": "@ai-crew-suite/agent-alert-tuner-backend",
   "description": "",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "type": "module", // frontend plugins only
   "main": "src/index.ts",
   "types": "src/index.ts",

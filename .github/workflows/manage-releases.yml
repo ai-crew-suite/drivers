@@ -1,0 +1,33 @@
+name: Publish Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    env:
+      CI: true
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - name: 📂 Checkout Repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: 🚀 Execute Centralized Distribution Pass
+        uses: ai-crew-suite/pipelines/manage-releases@v1
+        with:
+          publish-script: node packages/cli/dist/bin/crew.js publish
+          npm-auth-token: ${{ secrets.NPM_AUTH_TOKEN }}
+          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

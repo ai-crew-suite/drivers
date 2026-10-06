@@ -59,13 +59,12 @@ node_modules/
 # Ignore the transient path installation state cache file
 .yarn/install-state.gz
 
-# Standard Install (Keeps Git history lightweight)
-# This ignores the heavy zip archive cache, forcing developers to run `yarn install` on clone.
-.yarn/cache/
+# Ignores for enableImmutableCache: true
 .yarn/unplugged/
 .yarn/build-state.yml
 
 # NEVER ignore these critical Yarn orchestration and development files
+!.yarn/cache/
 !.yarn/patches/
 !.yarn/plugins/
 !.yarn/releases/

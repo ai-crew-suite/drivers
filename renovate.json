@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver"
+  ],
+  "schedule": ["on tuesday"],
+  "customManagers": [
+    {
+      "description": "Extract and update the version inside the root backstage.json file",
+      "customType": "regex",
+      "fileMatch": ["^backstage\\.json$"],
+      "matchStrings": ["\"version\":\\s*\"(?<currentValue>[^\"]+)\""],
+      "depNameTemplate": "@backstage/core",
+      "datasourceTemplate": "npm"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Enforce version range constraints for targeted Yarn catalog entries",
+      "matchDepTypes": ["yarn.catalog.*"],
+      "matchPackageNames": ["@types/react"],
+      "allowedVersions": "^18"
+    },
+    {
+      "description": "Enforce version range constraints for targeted Yarn catalog entries",
+      "matchDepTypes": ["yarn.catalog.*"],
+      "matchPackageNames": ["@types/react-dom"],
+      "allowedVersions": "^18"
+    },
+    {
+      "description": "Enforce version range constraints for targeted Yarn catalog entries",
+      "matchDepTypes": ["yarn.catalog.*"],
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "^6"
+    },
+    {
+      "description": "Bundle all upgrades across github actions, catalogs, root, and sub-package package.jsons into a single PR",
+      "matchPackagePatterns": ["*"],
+      "groupName": "All Dependencies",
+      "prBodyNotes": [
+        "### ⚠️ Testing Instructions for Consolidated Monorepo Upgrades",
+        "- [ ] Verify that the **Backstage IDP core plugin** still compiles properly.",
+        "- [ ] Run `turbo run build` across all sub-packages to check lockfile consistency.",
+        "- [ ] Ensure local Dev Mode launches successfully before merging."
+      ]
+    }
+  ]
+}

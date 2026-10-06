@@ -1,0 +1,41 @@
+name: CodeQL Security Scanning
+
+on:
+  push:
+    branches-ignore:
+      - "hotfix/**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze Code
+    if: ${{ !startsWith(github.head_ref || github.ref_name, 'hotfix/') }}
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["javascript"] # Consumer plugin repositories only track application js/ts, not local action formats
+
+    steps:
+      - name: 📂 Checkout Application Source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: 🔒 Execute Centralized CodeQL Scanners
+        uses: ai-crew-suite/pipelines/analyze-codeql@v1
+        with:
+          language: ${{ matrix.language }}
+
+  hotfix-bypass:
+    name: CodeQL Hotfix Bypass
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.head_ref || github.ref_name, 'hotfix/') }}
+    permissions: {}
+    steps:
+      - name: Skip CodeQL for hotfix branch
+        run: echo "hotfix/* branch detected; skipping CodeQL but allowing deployments."

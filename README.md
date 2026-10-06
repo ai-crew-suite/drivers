@@ -1,8 +1,11 @@
-# AI Crew Suite Drivers
+# AI Crew Suite for Spotify Backstage IDP - Drivers
 
 ![AI Crew Suite core plugins splash image](./ai-crew-suite-social-share-drivers.jpeg)
 
 AI Crew Suite is a Backstage plugin workspace for building retrieval-augmented, tool-using AI agents inside a developer portal. This repo includes a baseline collection of driver plugins for third-party platforms that agents can access, storage drivers, and AI service drivers.
+
+> [!WARNING]
+> This repo is pre-beta and under going heavy development as of October, 2026. We are refactoring from LangGraph to a fluent API for workflows in agentic plugins based on Temporal + Mem0 Vercel AI SDK.
 
 ## 🏗️ Development Workflow
 

@@ -1,0 +1,21 @@
+name: Flag and Close Stale Issues and Pull Requests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧹 Run Centralized Stale Engine
+        uses: ai-crew-suite/pipelines/close-stale-items@v1
+        with:
+          days-before-issue-stale: 60
+          days-before-pr-stale: 14

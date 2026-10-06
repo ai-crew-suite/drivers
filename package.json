@@ -1,20 +1,13 @@
 {
-  "name": "root",
-  "version": "0.0.1",
+  "name": "@ai-crew-suite/drivers",
+  "description": "AWS backend module for the AI Crew Suite plugin tool.",
   "private": true,
+  "license": "Apache-2.0",
   "engines": {
-    "node": "22 || 24"
+    "node": "22 || 24",
+    "npm": "Please use Yarn instead (Corepack enable)"
   },
   "packageManager": "yarn@4.18.0",
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs}": [
-      "eslint --config packages/config-eslint/eslint.monorepo.config.ts --fix"
-    ],
-    "*.{json,md,css,scss}": [
-      "prettier --write"
-    ]
-  },
-  "prettier": "@backstage/cli/config/prettier",
   "workspaces": [
     "packages/*",
     "plugins/**/*"
@@ -76,7 +69,7 @@
     "venv:setup": "yarn venv:make && yarn venv:install"
   },
   "devDependencies": {
-    "@ai-crew-suite/cli": "workspace:*",
+    "@ai-crew-suite/cli": "catalog:dev",
     "@backstage/cli": "backstage:^",
     "@backstage/cli-defaults": "backstage:^",
     "@backstage/cli-module-new": "backstage:^",
@@ -103,5 +96,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "6.0.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --config packages/config-eslint/eslint.monorepo.config.ts --fix"
+    ],
+    "*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
   }
 }

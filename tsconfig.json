@@ -1,262 +1,66 @@
 {
   "$schema": "https://schemastore.org",
-  "compilerOptions": {
-    "composite": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "jsx": "react-jsx",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES2022",
-    "types": [
-      "node"
-    ]
-  },
-  "files": [],
-  "include": [],
+  "extends": "./tsconfig.base.json",
   "references": [
     {
       "path": "./packages/app"
     },
     {
-      "path": "./packages/backend-legacy"
+      "path": "./packages/backend"
     },
     {
-      "path": "./packages/backend-modern"
+      "path": "./plugins/cloud-providers/aws"
     },
     {
-      "path": "./packages/cli"
+      "path": "./plugins/cloud-providers/gcp"
     },
     {
-      "path": "./plugins/agents/alert-tuner/backend"
+      "path": "./plugins/cloud-providers/azure"
     },
     {
-      "path": "./plugins/agents/alert-tuner/react"
+      "path": "./plugins/communication/slack"
     },
     {
-      "path": "./plugins/agents/catalog-insights/backend"
+      "path": "./plugins/finops/infracost"
     },
     {
-      "path": "./plugins/agents/catalog-insights/react"
+      "path": "./plugins/incident-management/pagerduty"
     },
     {
-      "path": "./plugins/agents/kubernetes-responder/backend"
+      "path": "./plugins/observability/datadog"
     },
     {
-      "path": "./plugins/agents/kubernetes-responder/react"
+      "path": "./plugins/project-management/jira"
     },
     {
-      "path": "./plugins/agents/oncall-handover/backend"
+      "path": "./plugins/quality-scorecards/scorecards"
     },
     {
-      "path": "./plugins/agents/oncall-handover/react"
+      "path": "./plugins/quality-scorecards/soundcheck"
     },
     {
-      "path": "./plugins/agents/release-notes-generator/backend"
+      "path": "./plugins/quality-scorecards/techradar"
     },
     {
-      "path": "./plugins/agents/release-notes-generator/react"
+      "path": "./plugins/vcs/aws-codecommit"
     },
     {
-      "path": "./plugins/agents/rfc-adr-reviewer/backend"
+      "path": "./plugins/vcs/azure"
     },
     {
-      "path": "./plugins/agents/rfc-adr-reviewer/react"
+      "path": "./plugins/vcs/bitbucket"
     },
     {
-      "path": "./plugins/agents/scaffolder-drift-detector/backend"
+      "path": "./plugins/vcs/gerrit"
     },
     {
-      "path": "./plugins/agents/scaffolder-drift-detector/react"
+      "path": "./plugins/vcs/git"
     },
     {
-      "path": "./plugins/agents/scaffolder-guardrail/backend"
+      "path": "./plugins/vcs/github"
     },
     {
-      "path": "./plugins/agents/scaffolder-guardrail/react"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-infra/backend"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-infra/react"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-intent/backend"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-intent/react"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-prd/backend"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-prd/react"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-shadow-detective/backend"
-    },
-    {
-      "path": "./plugins/agents/scaffolder-shadow-detective/react"
-    },
-    {
-      "path": "./plugins/agents/search-archeology/backend"
-    },
-    {
-      "path": "./plugins/agents/search-archeology/react"
-    },
-    {
-      "path": "./plugins/agents/search-context/backend"
-    },
-    {
-      "path": "./plugins/agents/search-context/react"
-    },
-    {
-      "path": "./plugins/agents/tech-debt-scout/backend"
-    },
-    {
-      "path": "./plugins/agents/tech-debt-scout/react"
-    },
-    {
-      "path": "./plugins/agents/tech-radar-manager/backend"
-    },
-    {
-      "path": "./plugins/agents/tech-radar-manager/react"
-    },
-    {
-      "path": "./plugins/agents/techdocs-janitor/backend"
-    },
-    {
-      "path": "./plugins/agents/techdocs-janitor/react"
-    },
-    {
-      "path": "./plugins/agents/techdocs-postmortem/backend"
-    },
-    {
-      "path": "./plugins/agents/techdocs-postmortem/react"
-    },
-    {
-      "path": "./plugins/databases/runtime"
-    },
-    {
-      "path": "./plugins/databases/vector/pgvector"
-    },
-    {
-      "path": "./plugins/databases/vector/qdrant"
-    },
-    {
-      "path": "./plugins/inference/aws"
-    },
-    {
-      "path": "./plugins/inference/openai"
-    },
-    {
-      "path": "./plugins/inference/openrouter"
-    },
-    {
-      "path": "./plugins/kernel/backend"
-    },
-    {
-      "path": "./plugins/kernel/node"
-    },
-    {
-      "path": "./plugins/kernel/react"
-    },
-    {
-      "path": "./plugins/kernel/retrieval-augmenter"
-    },
-    {
-      "path": "./plugins/tools/cloud-providers/aws"
-    },
-    {
-      "path": "./plugins/tools/cloud-providers/azure"
-    },
-    {
-      "path": "./plugins/tools/cloud-providers/engine"
-    },
-    {
-      "path": "./plugins/tools/cloud-providers/gcp"
-    },
-    {
-      "path": "./plugins/tools/communication/engine"
-    },
-    {
-      "path": "./plugins/tools/communication/slack"
-    },
-    {
-      "path": "./plugins/tools/compliance/engine"
-    },
-    {
-      "path": "./plugins/tools/compliance/opa"
-    },
-    {
-      "path": "./plugins/tools/incident-management/engine"
-    },
-    {
-      "path": "./plugins/tools/incident-management/pagerduty"
-    },
-    {
-      "path": "./plugins/tools/kubernetes"
-    },
-    {
-      "path": "./plugins/tools/observability/datadog"
-    },
-    {
-      "path": "./plugins/tools/observability/engine"
-    },
-    {
-      "path": "./plugins/tools/project-management/engine"
-    },
-    {
-      "path": "./plugins/tools/project-management/jira"
-    },
-    {
-      "path": "./plugins/tools/quality-scorecards/engine"
-    },
-    {
-      "path": "./plugins/tools/quality-scorecards/scorecards"
-    },
-    {
-      "path": "./plugins/tools/quality-scorecards/soundcheck"
-    },
-    {
-      "path": "./plugins/tools/quality-scorecards/techradar"
-    },
-    {
-      "path": "./plugins/tools/vcs/aws-codecommit"
-    },
-    {
-      "path": "./plugins/tools/vcs/azure"
-    },
-    {
-      "path": "./plugins/tools/vcs/bitbucket"
-    },
-    {
-      "path": "./plugins/tools/vcs/engine"
-    },
-    {
-      "path": "./plugins/tools/vcs/gerrit"
-    },
-    {
-      "path": "./plugins/tools/vcs/git"
-    },
-    {
-      "path": "./plugins/tools/vcs/github"
-    },
-    {
-      "path": "./plugins/tools/vcs/gitlab"
+      "path": "./plugins/vcs/gitlab"
     }
   ]
 }

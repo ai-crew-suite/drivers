@@ -5,32 +5,19 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
-  create-release-pr:
-    name: Create Changeset PR
+  run-release-pipeline:
+    name: Execute Release Automation
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22]
-
     steps:
-      - name: 📂 Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: 🟢 Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      # Pattern: uses: {org}/{repo}/{folder}@{ref}
+      - name: 🛠️ Trigger Centralized Changeset Engine
+        uses: ai-crew-suite/pipelines/changeset@v1
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: 📦 Install Workspace Dependencies
-        uses: backstage/actions/yarn-install@0d281eb2e96927466db49d4cd01d52b14809a66b # v0.7.10
-        with:
-          cache-prefix: ${{ runner.os }}-node-${{ matrix.node-version }}
-
-      - name: 🚀 Create Release Pull Request
-        uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
-        with:
-          version-script: yarn release
-          pr-title: "Version Packages - plugins"
-          # v2 reads the token only from this input; the GITHUB_TOKEN env var is ignored
+          node-version: 22
+          pr-title: "Version Packages - Backstage Plugins Suite"
           github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,15 @@
+{
+  "connector": {
+    "name": "local"
+  },
+  "hints": {
+    "typescript-config/is-valid": "error"
+  },
+  "ignoredUrls": [
+    {
+      "comment": "🛡️ SILENCE OUTDATED TSCONFIG VALIDATIONS: Completely bypass webhint rules for the legacy server configuration profile.",
+      "domain": ".*/packages/backend-legacy/tsconfig\\.json$",
+      "hints": ["*"]
+    }
+  ]
+}
