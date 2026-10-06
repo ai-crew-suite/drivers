@@ -87,7 +87,7 @@
     "@emotion/styled": "^11.14.1",
     "@material-ui/core": "catalog:material-ui-core",
     "@material-ui/icons": "catalog:material-ui-icons",
-    "@mui/material": "^7.3.11",
+    "@mui/material": "^9.4.0",
     "@rjsf/utils": "^6.10.0",
     "i18next": "catalog:i18next",
     "prop-types": "^15.8.1",
