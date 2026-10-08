@@ -84,39 +84,4 @@ backend.add(loadBackendFeature(import('@backstage/plugin-signals-backend')));
 // mcp actions plugin
 backend.add(loadBackendFeature(import('@backstage/plugin-mcp-actions-backend')));
 
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-vcs')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-observability')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-observability-datadog')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-incident-management')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-incident-management-pagerduty')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-compliance')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-compliance-opa')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-cloud-providers')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-project-management')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-project-management-jira')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-communication')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-communication-slack')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-quality-scorecards')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-kernel-backend-module-runtime-store')));
-
-// agent workflow modules (AI Core agents)
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-catalog-insights-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-oncall-handover-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-release-notes-generator-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-rfc-adr-reviewer-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/agent-alert-tuner-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-drift-detector-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-guardrail-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-infra-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-infra-backend/scaffolderModule')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-intent-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-shadow-detective-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-scaffolder-prd-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-search-archeology-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-search-context-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-tech-debt-scout-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-tech-radar-manager-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-techdocs-janitor-backend')));
-backend.add(loadBackendFeature(import('@ai-crew-suite/plugin-agent-techdocs-postmortem-backend')));
-
 backend.start();

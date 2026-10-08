@@ -20,20 +20,20 @@
   },
   "backstage": {
     "role": "backend-plugin-module",
-    "pluginId": "tools-incident-management",
-    "pluginPackages": [
-      "@ai-crew-suite/plugin-tool-incident-management-backend",
-      "@ai-crew-suite/plugin-tool-incident-management-backend-module-pagerduty"
+    "pluginId": "platform",
+    "pluginPackage": [
+      "@ai-crew-suite/plugin-platform-backend",
+      "@ai-crew-suite/plugin-platform-node"
     ]
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
-    "directory": "plugins/tools/incident-management/pagerduty"
+    "url": "https://github.com/ai-crew-suite/drivers",
+    "directory": "plugins/incident-management/pagerduty"
   },
   "files": [
     "dist",
@@ -56,7 +56,8 @@
   },
   "devDependencies": {
     "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/typescript-shared-config": "catalog:dev",
     "@backstage/backend-test-utils": "backstage:^",
-    "vitest": "catalog:vitest"
+    "vitest": "catalog:dev"
   }
 }

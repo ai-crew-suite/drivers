@@ -119,12 +119,12 @@ find . -type f -exec sed -i 's|https://github.com/ai-crew-suite|https://github.c
     ]
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
+    "url": "https://github.com/ai-crew-suite/drivers",
     "directory": ""
   },
   "files": [
@@ -146,8 +146,8 @@ find . -type f -exec sed -i 's|https://github.com/ai-crew-suite|https://github.c
     "@backstage/config": "backstage:^",
   },
   "devDependencies": {
-    "@ai-crew-suite/cli": "workspace:*",
-    "vitest": "catalog:vitest"
+    "@ai-crew-suite/cli": "catalog:dev",
+    "vitest": "catalog:dev"
   }
 }
 ```
@@ -306,7 +306,7 @@ Every agent consists of a co-located frontend and backend folder under `plugins/
 
 ### 2. Tools & Infrastructure (The Registry/Provider Split)
 
-Both Tools (`plugins/tools/`) and Infrastructure (`plugins/core/infra/`) follow a decoupled **Hub and Spoke** pattern. We explicitly separate the orchestration hub from individual vendor integrations.
+Both Tools (`plugins/`) and Infrastructure (`plugins/core/infra/`) follow a decoupled **Hub and Spoke** pattern. We explicitly separate the orchestration hub from individual vendor integrations.
 
 #### A. The Registry / Factory Hub (-core)
 
@@ -328,7 +328,7 @@ Satellite folders represent the standalone vendor plugins. They handle credentia
 
 1. **No Circular Dependencies:** `tools` may never depend on `agents`. `infra` may never depend on tools.
 2. **Pure Providers:** Satellite driver modules (e.g., `tool-vcs-github`) should strictly register their implementation to their respective hub extension point and side-effect nothing else.
-3. **No Root Clutter:** Do not flatten domain integrations into the root of `plugins/tools/`. Keep them neatly grouped inside subdirectories (e.g., `plugins/tools/vcs/*`).
+3. **No Root Clutter:** Do not flatten domain integrations into the root of `plugins/`. Keep them neatly grouped inside subdirectories (e.g., `plugins/vcs/*`).
 
 ## Fixing Build
 

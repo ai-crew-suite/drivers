@@ -41,7 +41,7 @@ Boot fails with an explicit error when the selected identifier has no registered
 
 ## Authoring a New Driver Module
 
-1. Create a workspace directory under `plugins/tools/compliance/<provider>`.
+1. Create a workspace directory under `plugins/compliance/<provider>`.
 2. Implement `ComplianceDriver` from `@ai-crew-suite/plugin-tool-compliance-backend` (or its shared node types).
 3. Depend on `complianceDriversExtensionPoint` in `createBackendModule` and call `registerDriver` during initialization.
 4. Own `ai.integrations.compliance.<provider>` in your package's `config.d.ts`.

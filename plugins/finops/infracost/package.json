@@ -20,20 +20,20 @@
   },
   "backstage": {
     "role": "backend-plugin",
-    "pluginId": "tools-compliance",
-    "pluginPackages": [
-      "@ai-crew-suite/plugin-tool-compliance-backend",
-      "@ai-crew-suite/plugin-tool-compliance-backend-module-opa"
+    "pluginId": "platform",
+    "pluginPackage": [
+      "@ai-crew-suite/plugin-platform-backend",
+      "@ai-crew-suite/plugin-platform-node"
     ]
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
-    "directory": "plugins/tools/compliance/backend"
+    "url": "https://github.com/ai-crew-suite/drivers",
+    "directory": "plugins/compliance/backend"
   },
   "files": [
     "dist",
@@ -56,7 +56,8 @@
   },
   "devDependencies": {
     "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/typescript-shared-config": "catalog:dev",
     "@backstage/backend-test-utils": "backstage:^",
-    "vitest": "catalog:vitest"
+    "vitest": "catalog:dev"
   }
 }

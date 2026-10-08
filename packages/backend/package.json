@@ -19,12 +19,12 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
+    "url": "https://github.com/ai-crew-suite/drivers",
     "directory": "packages/app"
   },
   "files": [
@@ -40,43 +40,6 @@
     "typecheck": "crew typecheck"
   },
   "dependencies": {
-    "@ai-crew-suite/plugin-agent-alert-tuner-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-catalog-insights-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-oncall-handover-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-release-notes-generator-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-rfc-adr-reviewer-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-scaffolder-drift-detector-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-scaffolder-guardrail-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-scaffolder-infra-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-scaffolder-intent-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-scaffolder-prd-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-scaffolder-shadow-detective-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-search-archeology-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-search-context-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-tech-debt-scout-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-tech-radar-manager-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-techdocs-janitor-backend": "workspace:^",
-    "@ai-crew-suite/plugin-agent-techdocs-postmortem-backend": "workspace:^",
-    "@ai-crew-suite/plugin-ai-providers-backend-module-aws": "workspace:^",
-    "@ai-crew-suite/plugin-ai-providers-backend-module-openai": "workspace:^",
-    "@ai-crew-suite/plugin-ai-providers-backend-module-openrouter": "workspace:^",
-    "@ai-crew-suite/plugin-databases-runtime-backend": "workspace:^",
-    "@ai-crew-suite/plugin-kernel-backend": "workspace:^",
-    "@ai-crew-suite/plugin-kernel-backend-module-quality-scorecards": "workspace:^",
-    "@ai-crew-suite/plugin-kernel-node": "workspace:^",
-    "@ai-crew-suite/plugin-tool-cloud-providers-backend": "workspace:^",
-    "@ai-crew-suite/plugin-tool-communication-backend": "workspace:^",
-    "@ai-crew-suite/plugin-tool-communication-backend-module-slack": "workspace:^",
-    "@ai-crew-suite/plugin-tool-compliance-backend": "workspace:^",
-    "@ai-crew-suite/plugin-tool-compliance-backend-module-opa": "workspace:^",
-    "@ai-crew-suite/plugin-tool-incident-management-backend": "workspace:^",
-    "@ai-crew-suite/plugin-tool-incident-management-backend-module-pagerduty": "workspace:^",
-    "@ai-crew-suite/plugin-tool-observability-backend": "workspace:^",
-    "@ai-crew-suite/plugin-tool-observability-backend-module-datadog": "workspace:^",
-    "@ai-crew-suite/plugin-tool-project-management-backend": "workspace:^",
-    "@ai-crew-suite/plugin-tool-project-management-backend-module-jira": "workspace:^",
-    "@ai-crew-suite/plugin-tools-vcs-backend": "workspace:^",
-    "@ai-crew-suite/plugin-vector-store-pgvector": "workspace:^",
     "@backstage/backend-defaults": "backstage:^",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/config": "backstage:^",
@@ -107,11 +70,11 @@
     "@backstage/plugin-signals-backend": "backstage:^",
     "@backstage/plugin-techdocs-backend": "backstage:^",
     "app": "link:../app",
-    "better-sqlite3": "^13.0.3",
-    "pg": "^8.23.0"
+    "better-sqlite3": "catalog:prod",
+    "pg": "catalog:prod"
   },
   "devDependencies": {
     "@backstage/cli": "backstage:^",
-    "vitest": "catalog:vitest"
+    "vitest": "catalog:dev"
   }
 }

@@ -22,26 +22,20 @@
   },
   "backstage": {
     "role": "backend-plugin-module",
-    "pluginId": "tools-vcs",
-    "pluginPackages": [
-      "@ai-crew-suite/plugin-tools-vcs-backend",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-aws-codecommit",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-azure",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-bitbucket",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-gerrit",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-git",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-github",
-      "@ai-crew-suite/plugin-tools-vcs-backend-module-gitlab"
+    "pluginId": "platform",
+    "pluginPackage": [
+      "@ai-crew-suite/plugin-platform-backend",
+      "@ai-crew-suite/plugin-platform-node"
     ]
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
-    "directory": "plugins/tools/vcs/aws-codecommit"
+    "url": "https://github.com/ai-crew-suite/drivers",
+    "directory": "plugins/vcs/aws-codecommit"
   },
   "files": [
     "dist",
@@ -59,13 +53,14 @@
   },
   "dependencies": {
     "@ai-crew-suite/plugin-kernel-node": "workspace:^",
-    "@aws-sdk/client-codecommit": "^3.1129.0",
+    "@aws-sdk/client-codecommit": "catalog:prod",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/integration": "backstage:^"
   },
   "devDependencies": {
     "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/typescript-shared-config": "catalog:dev",
     "@backstage/backend-test-utils": "backstage:^",
-    "vitest": "catalog:vitest"
+    "vitest": "catalog:dev"
   }
 }

@@ -21,22 +21,20 @@
   },
   "backstage": {
     "role": "backend-plugin-module",
-    "pluginId": "tools-cloud-providers",
-    "pluginPackages": [
-      "@ai-crew-suite/plugin-tool-cloud-providers-backend",
-      "@ai-crew-suite/plugin-tool-cloud-providers-backend-module-aws",
-      "@ai-crew-suite/plugin-tool-cloud-providers-backend-module-azure",
-      "@ai-crew-suite/plugin-tool-cloud-providers-backend-module-gcp"
+    "pluginId": "platform",
+    "pluginPackage": [
+      "@ai-crew-suite/plugin-platform-backend",
+      "@ai-crew-suite/plugin-platform-node"
     ]
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
-    "directory": "plugins/tools/cloud-providers/azure"
+    "url": "https://github.com/ai-crew-suite/drivers",
+    "directory": "plugins/cloud-providers/azure"
   },
   "files": [
     "dist",
@@ -54,14 +52,15 @@
   },
   "dependencies": {
     "@ai-crew-suite/plugin-kernel-node": "workspace:^",
-    "@azure/arm-resources": "^8.0.0",
-    "@azure/identity": "^4.13.2",
+    "@azure/arm-resources": "catalog:prod",
+    "@azure/identity": "catalog:prod",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/config": "backstage:^"
   },
   "devDependencies": {
     "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/typescript-shared-config": "catalog:dev",
     "@backstage/backend-test-utils": "backstage:^",
-    "vitest": "catalog:vitest"
+    "vitest": "catalog:dev"
   }
 }

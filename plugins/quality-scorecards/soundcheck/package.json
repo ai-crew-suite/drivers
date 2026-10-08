@@ -21,20 +21,20 @@
   },
   "backstage": {
     "role": "backend-plugin-module",
-    "pluginId": "tools-quality-scorecards",
-    "pluginPackages": [
-      "@ai-crew-suite/plugin-tool-quality-scorecards-backend",
-      "@ai-crew-suite/plugin-tool-quality-scorecards-backend-module-scorecards"
+    "pluginId": "platform",
+    "pluginPackage": [
+      "@ai-crew-suite/plugin-platform-backend",
+      "@ai-crew-suite/plugin-platform-node"
     ]
   },
   "bugs": {
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite/issues",
+    "url": "https://github.com/ai-crew-suite/drivers/issues",
     "email": "support@ai-crew-suite.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ai-crew-suite/ai-crew-suite",
-    "directory": "plugins/tools/quality-scorecards/soundcheck"
+    "url": "https://github.com/ai-crew-suite/drivers",
+    "directory": "plugins/quality-scorecards/soundcheck"
   },
   "files": [
     "dist",
@@ -53,12 +53,13 @@
   "dependencies": {
     "@ai-crew-suite/plugin-kernel-node": "workspace:^",
     "@backstage/backend-plugin-api": "backstage:^",
-    "@spotify/backstage-plugin-soundcheck-backend": "0.31.1",
-    "@spotify/backstage-plugin-soundcheck-node": "^0.16.0"
+    "@spotify/backstage-plugin-soundcheck-backend": "catalog:prod",
+    "@spotify/backstage-plugin-soundcheck-node": "catalog:prod"
   },
   "devDependencies": {
     "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/typescript-shared-config": "catalog:dev",
     "@backstage/backend-test-utils": "backstage:^",
-    "vitest": "catalog:vitest"
+    "vitest": "catalog:dev"
   }
 }

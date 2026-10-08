@@ -32,5 +32,13 @@
       "master-catalogs.yml"
     ]
   },
-  "yaml.validate": true
+  "yaml.validate": true,
+  "cSpell.words": [
+    "FINRA",
+    "jiti",
+    "jsdom",
+    "rjsf",
+    "vercel",
+    "vite"
+  ]
 }
