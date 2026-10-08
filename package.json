@@ -30,7 +30,7 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/crew-cli": "catalog:dev",
     "@backstage/cli": "catalog:dev",
     "@backstage/cli-defaults": "catalog:dev",
     "@backstage/cli-module-new": "catalog:dev",

@@ -146,7 +146,7 @@ find . -type f -exec sed -i 's|https://github.com/ai-crew-suite|https://github.c
     "@backstage/config": "backstage:^",
   },
   "devDependencies": {
-    "@ai-crew-suite/cli": "catalog:dev",
+    "@ai-crew-suite/crew-cli": "catalog:dev",
     "vitest": "catalog:dev"
   }
 }
