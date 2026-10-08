@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: 🔍 Execute Centralized Dependency Check
-        uses: ai-crew-suite/pipelines/run-dependency-review@v1
+        uses: ai-crew-suite/pipelines/actions/run-dependency-review@v1
 
   hotfix-bypass:
     name: Dependency Review Hotfix Bypass
@@ -26,4 +26,4 @@ jobs:
     if: ${{ startsWith(github.head_ref || github.ref_name, 'hotfix/') }}
     steps:
       - name: 🪵 Execute Centralized Bypass Registration
-        uses: ai-crew-suite/pipelines/bypass-dependency-review@v1
+        uses: ai-crew-suite/pipelines/actions/bypass-dependency-review@v1

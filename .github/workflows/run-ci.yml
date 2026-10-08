@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: CI Pipeline Engine
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: 🏎️ Execute Centralized CI Core
-        uses: ai-crew-suite/pipelines/run-ci@v1
+        uses: ai-crew-suite/pipelines/actions/run-ci@v1
         with:
           node-version: ${{ matrix.node-version }}
           playwright-base-url: http://localhost:3000

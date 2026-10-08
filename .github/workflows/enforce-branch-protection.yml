@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🔍 Execute Centralized Branch Validation Rules
-        uses: ai-crew-suite/pipelines/enforce-branch-protection@v1
+        uses: ai-crew-suite/pipelines/actions/enforce-branch-protection@v1
         with:
           head-ref: ${{ github.head_ref }}
           base-ref: ${{ github.base_ref }}

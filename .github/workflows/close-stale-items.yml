@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🧹 Run Centralized Stale Engine
-        uses: ai-crew-suite/pipelines/close-stale-items@v1
+        uses: ai-crew-suite/pipelines/actions/close-stale-items@v1
         with:
           days-before-issue-stale: 60
           days-before-pr-stale: 14

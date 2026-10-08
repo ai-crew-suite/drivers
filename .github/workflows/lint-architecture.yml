@@ -17,4 +17,4 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: 🔍 Execute Centralized Architecture Audit
-        uses: ai-crew-suite/pipelines/lint-architecture@v1
+        uses: ai-crew-suite/pipelines/actions/lint-architecture@v1

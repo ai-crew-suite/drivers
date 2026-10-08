@@ -1,0 +1,16 @@
+name: Production Deployment Pipeline
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  deploy-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🎭 Run Centralized Playwright Run Engine
+        uses: ai-crew-suite/pipelines/actions/run-playwright-tests@v1

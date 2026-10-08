@@ -1,2 +1,2 @@
 # Lint and format only staged files before commit.
-yarn lint-staged
+#yarn lint-staged

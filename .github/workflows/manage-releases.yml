@@ -1,33 +1,25 @@
-name: Publish Build
+name: Automated Version Sync
 
 on:
-  workflow_dispatch:
   push:
     branches: [main]
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  publish:
+  version-sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write
-    env:
-      CI: true
-      NODE_OPTIONS: --max-old-space-size=4096
-    steps:
-      - name: 📂 Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          fetch-depth: 0
+      pull-requests: write # Required to allow Changesets to open PRs
 
-      - name: 🚀 Execute Centralized Distribution Pass
-        uses: ai-crew-suite/pipelines/manage-releases@v1
+    steps:
+      - name: 🚀 Execute Centralized PR Controller Pass
+        uses: ai-crew-suite/pipelines/actions/changeset-pr-controller@v1
         with:
-          publish-script: node packages/cli/dist/bin/crew.js publish
-          npm-auth-token: ${{ secrets.NPM_AUTH_TOKEN }}
-          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          node-version: "22"
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-title: "Version Packages - Release Automated Updates"

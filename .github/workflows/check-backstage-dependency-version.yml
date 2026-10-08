@@ -1,4 +1,4 @@
-name: Check Bump Versions for Backstagte Core
+name: Check Bump Versions for Backstage Core
 
 on:
   schedule:
@@ -18,6 +18,6 @@ jobs:
           fetch-depth: 0
 
       - name: 🚀 Run Centralized Upstream Upgrade Check
-        uses: ai-crew-suite/pipelines/check-backstage-dependency-version@v1
+        uses: ai-crew-suite/pipelines/actions/check-backstage-dependency-version@v1
         with:
           workflow-github-token: ${{ secrets.WORKFLOW_GITHUB_TOKEN }}
