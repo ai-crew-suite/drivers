@@ -20,7 +20,7 @@ import {
   RepositoryMetadata,
   RepositorySearchResult,
   PullRequestSummary,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * Isolated parameters required to instantiate the concrete Gerrit VCS adapter.
@@ -127,7 +127,7 @@ export class GerritDriver implements VcsDriver {
 
     this.logger.debug(`GerritDriver reading path file data from endpoint: ${targetUrl}`);
     const res = await fetch(targetUrl, { headers: this.getAuthHeaders(ctx) });
-    
+
     if (!res.ok) {
       throw new Error(`Gerrit file read failed for ${cleanPath}: ${res.statusText}`);
     }

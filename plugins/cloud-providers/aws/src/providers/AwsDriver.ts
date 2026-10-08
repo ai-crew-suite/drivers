@@ -24,7 +24,7 @@ import {
   CloudAccountSummary,
   CloudResourceSummary,
   CloudDependencySummary
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * Isolated parameters required to instantiate the concrete AWS Cloud Provider adapter.

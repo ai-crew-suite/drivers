@@ -24,7 +24,7 @@ import {
   TicketSearchQuery,
   TicketState,
   TicketSummary,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * Connection settings for the Jira ticket driver.

@@ -27,7 +27,7 @@ import {
   RepositoryMetadata,
   RepositorySearchResult,
   PullRequestSummary
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * Isolated parameters required to instantiate the concrete AWS CodeCommit VCS adapter.
@@ -55,7 +55,7 @@ export class AwsCodeCommitDriver implements VcsDriver {
    * Helper to resolve the correct integration and configure the native AWS CodeCommit SDK client
    */
   private getClientForRepo(repoUrl: string): { client: CodeCommitClient; repoName: string; region: string } {
-    // CRITICAL FIX 1: Access via `.awsCodeCommit` is not an array index property. 
+    // CRITICAL FIX 1: Access via `.awsCodeCommit` is not an array index property.
     // It is resolved via the standard byUrl getter function block.
     const integration = this.integrations.awsCodeCommitByUrl(repoUrl);
     if (!integration) {
@@ -83,7 +83,7 @@ export class AwsCodeCommitDriver implements VcsDriver {
 
     const client = new CodeCommitClient({
       region,
-      // Access keys on the baseline config can evaluate to undefined. 
+      // Access keys on the baseline config can evaluate to undefined.
       // We must casting block to string or provide empty fallbacks to satisfy the SDK contract.
       credentials: integration.config.accessKeyId && integration.config.secretAccessKey ? {
         accessKeyId: integration.config.accessKeyId,

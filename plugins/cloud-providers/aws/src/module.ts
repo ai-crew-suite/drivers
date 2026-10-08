@@ -15,7 +15,7 @@
  */
 import { coreServices, createBackendModule } from '@backstage/backend-plugin-api';
 import { DefaultAwsCredentialsManager } from '@backstage/integration-aws-node';
-import { cloudDriversExtensionPoint } from '@ai-crew-suite/plugin-kernel-node';
+import { cloudDriversExtensionPoint } from '@ai-crew-suite/plugin-package-node';
 import { AwsDriver } from './providers/AwsDriver';
 
 export const toolCloudProvidersModuleAws = createBackendModule({

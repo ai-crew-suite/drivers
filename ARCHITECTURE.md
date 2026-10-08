@@ -84,7 +84,7 @@ find . -type f -exec sed -i 's|https://github.com/ai-crew-suite|https://github.c
 ```
 
 ```bash
-@ai-crew-suite/plugin-kernel-node
+@ai-crew-suite/plugin-package-node
 ```
 
 ### `package.json`
@@ -141,7 +141,7 @@ find . -type f -exec sed -i 's|https://github.com/ai-crew-suite|https://github.c
     "typecheck": "crew typecheck"
   },
   "dependencies": {
-    "@ai-crew-suite/plugin-kernel-node": "workspace:^",
+    "@ai-crew-suite/plugin-package-node": "workspace:^",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/config": "backstage:^",
   },
@@ -182,7 +182,7 @@ ai-crew-suite/
 ├── plugins/
 │   ├── kernel/
 │   │   ├── backend/                        # @ai-crew-suite/plugin-kernel-backend
-│   │   ├── node/                           # @ai-crew-suite/plugin-kernel-node
+│   │   ├── node/                           # @ai-crew-suite/plugin-package-node
 │   │   ├── llm/
 │   │   │   ├── aws/                        # @ai-crew-suite/plugin-ai-providers-backend-module-aws
 │   │   │   ├── openai/                     # @ai-crew-suite/plugin-ai-providers-backend-module-openai

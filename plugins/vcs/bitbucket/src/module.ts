@@ -15,7 +15,7 @@
  */
 import { createBackendModule, coreServices } from '@backstage/backend-plugin-api';
 import { ScmIntegrations } from '@backstage/integration';
-import { vcsDriversExtensionPoint } from '@ai-crew-suite/plugin-kernel-node';
+import { vcsDriversExtensionPoint } from '@ai-crew-suite/plugin-package-node';
 import { BitbucketDriver } from './providers/bitbucket';
 
 /**

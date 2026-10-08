@@ -39,7 +39,6 @@
     "@playwright/test": "catalog:dev",
     "@types/node": "catalog:dev",
     "husky": "catalog:dev",
-    "i18next": "catalog:dev",
     "lint-staged": "catalog:dev",
     "prettier": "catalog:dev",
     "prop-types": "catalog:dev",

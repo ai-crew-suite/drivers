@@ -23,7 +23,7 @@ import {
   RepositoryMetadata,
   RepositorySearchResult,
   VcsDriver,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * Isolated parameters required to instantiate the concrete Azure DevOps VCS adapter.
@@ -69,7 +69,7 @@ export class AzureDriver implements VcsDriver {
       const host = urlObj.host;
       const pathParts = urlObj.pathname.split('/').filter(Boolean);
 
-      // FIXED BUG 1: urlObj.host parses raw domain properties (e.g., 'dev.azure.com'), 
+      // FIXED BUG 1: urlObj.host parses raw domain properties (e.g., 'dev.azure.com'),
       // never a protocol scheme literal prefix like '://azure.com'.
       if (host === 'dev.azure.com' || host === 'azure.com') {
         if (pathParts.length < 4) throw new Error();

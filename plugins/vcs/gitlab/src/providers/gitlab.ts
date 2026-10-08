@@ -21,7 +21,7 @@ import {
   RepositoryMetadata,
   RepositorySearchResult,
   VcsDriver,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * Isolated parameters required to instantiate the concrete GitLab VCS adapter.

@@ -21,7 +21,7 @@ import {
   ComplianceDriver,
   complianceDriversExtensionPoint,
   toolExtensionPoint,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 import { readComplianceConfig } from './config';
 import { createComplianceTools } from './tools';
 

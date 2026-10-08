@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { coreServices, createBackendModule } from '@backstage/backend-plugin-api';
-import { qualityScorecardsExtensionPoint } from '@ai-crew-suite/plugin-kernel-node';
+import { qualityScorecardsExtensionPoint } from '@ai-crew-suite/plugin-package-node';
 import { ScorecardsDriver } from './providers/ScorecardsDriver';
 
 export const toolQualityScorecardsModuleScorecards = createBackendModule({

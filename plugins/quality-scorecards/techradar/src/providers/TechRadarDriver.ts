@@ -15,12 +15,12 @@
  */
 import { randomUUID } from 'crypto';
 import { Config } from '@backstage/config';
-import { 
-  QualityScorecardsDriver, 
-  EntityScorecardSummary, 
-  TechRadarProposalInput, 
-  TechRadarProposalResponse 
-} from '@ai-crew-suite/plugin-kernel-node';
+import {
+  QualityScorecardsDriver,
+  EntityScorecardSummary,
+  TechRadarProposalInput,
+  TechRadarProposalResponse
+} from '@ai-crew-suite/plugin-package-node';
 
 export interface TechRadarDriverOptions {
   logger: any;
@@ -52,8 +52,8 @@ export class TechRadarDriver implements QualityScorecardsDriver {
     this.logger.debug(`Targeting radar backend manifest location context: ${techRadarUrl}`);
 
     const generatedProposalId = `prop-${randomUUID()}`;
-    
-    // Commit the proposal changes directly into our local tracking registry map 
+
+    // Commit the proposal changes directly into our local tracking registry map
     this.draftProposals.set(generatedProposalId, {
       id: generatedProposalId,
       quadrant: input.quadrantId,

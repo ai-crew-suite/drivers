@@ -51,7 +51,7 @@
     "typecheck": "crew typecheck"
   },
   "dependencies": {
-    "@ai-crew-suite/plugin-kernel-node": "workspace:^",
+    "@ai-crew-suite/plugin-package-node": "catalog:prod",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/config": "backstage:^"
   },

@@ -20,7 +20,7 @@ import {
   EntityScorecardSummary,
   ScorecardCheckResult,
   TechRadarProposalResponse,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 
 /**
  * JSON payload shape served from the scorecards data URL. Mirrors the

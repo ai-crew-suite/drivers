@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemastore.org",
-  "extends": "./tsconfig.base.json",
+  "extends": "@ai-crew-suite/typescript-shared-config/node",
   "references": [
     {
       "path": "./packages/app"

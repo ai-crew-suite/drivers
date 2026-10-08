@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { LoggerService } from '@backstage/backend-plugin-api';
-import { ComplianceDriver, ToolDefinition } from '@ai-crew-suite/plugin-kernel-node';
+import { ComplianceDriver, ToolDefinition } from '@ai-crew-suite/plugin-package-node';
 
 type EvaluatePolicyArgs = { policyId?: string; input: unknown };
 type CheckPermissionArgs = { userRef: string; action: string; resource?: string };

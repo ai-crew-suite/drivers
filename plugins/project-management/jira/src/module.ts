@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { coreServices, createBackendModule } from '@backstage/backend-plugin-api';
-import { projectManagementDriversExtensionPoint } from '@ai-crew-suite/plugin-kernel-node';
+import { projectManagementDriversExtensionPoint } from '@ai-crew-suite/plugin-package-node';
 import { JiraDriver } from './providers/JiraDriver';
 import { readJiraConfig } from './config';
 

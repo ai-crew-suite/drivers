@@ -18,4 +18,4 @@ export {
   complianceDriversExtensionPoint,
 	type ComplianceDriver,
 	type ComplianceDriversExtensionPoint,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';

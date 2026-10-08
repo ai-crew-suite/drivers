@@ -15,7 +15,7 @@
  */
 import { coreServices, createBackendModule } from '@backstage/backend-plugin-api';
 import { soundcheckBackendClientServiceRef } from '@spotify/backstage-plugin-soundcheck-node';
-import { qualityScorecardsExtensionPoint } from '@ai-crew-suite/plugin-kernel-node';
+import { qualityScorecardsExtensionPoint } from '@ai-crew-suite/plugin-package-node';
 import { SoundcheckDriver } from './providers/SoundcheckDriver';
 
 export const toolQualityScorecardsModuleSoundcheck = createBackendModule({

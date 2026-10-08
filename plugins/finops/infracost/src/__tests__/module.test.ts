@@ -19,7 +19,7 @@ import {
   ToolExtensionPoint,
   complianceDriversExtensionPoint,
   toolExtensionPoint,
-} from '@ai-crew-suite/plugin-kernel-node';
+} from '@ai-crew-suite/plugin-package-node';
 import { describe, expect, it, vi } from 'vitest';
 import { aiCoreBackendModuleCompliance } from '../module';
 
