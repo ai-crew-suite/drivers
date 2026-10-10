@@ -1,6 +1,0 @@
-{
-  "extends": "@ai-crew-suite/typescript-shared-config/web",
-  "compilerOptions": {
-    "outDir": "../../dist-types/packages/app"
-  }
-}

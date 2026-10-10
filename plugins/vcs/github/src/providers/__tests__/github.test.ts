@@ -112,7 +112,7 @@ describe('GitHubDriver', () => {
 
     // FIX: Change 'https://github.com' to the full target repository URL path
     const content = await driver.readFile(
-      'https://github.com/ai-crew-suite/ai-crew-suite',
+      'https://github.com/ai-crew-suite/drivers',
       'README.md',
     );
 

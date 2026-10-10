@@ -41,6 +41,14 @@ Add a `--filter`  flag to the command:
 yarn turbo run test:unit --filter=@ai-crew-suite/plugin-kernel-backend
 ```
 
+### 4. Adding Packages
+
+This repo sets `enableImmutableCache` to `true` in `.yarnrc.yml` for compliance with FINRA, SOC-2, and HIPAA enterprise environments. This enforces cryptographic reproducibility and supply-chain immutability in the repo. It also blocks adding or upgrading package versions locally. Renovatebot handles this automatically by executing Yarn in a mode equivalent to `--mode=update-lockfile`. To add a package locally:
+
+```bash
+YARN_ENABLE_IMMUTABLE_CACHE=false yarn install
+```
+
 ## 📚 Documentation
 
 When adding or changing a core backend module, update the matching package README and the relevant page in the [documentation site repo](https://github.com/ai-crew-suite/documentation).

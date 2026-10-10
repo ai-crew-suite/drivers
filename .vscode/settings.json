@@ -38,6 +38,7 @@
     "jiti",
     "jsdom",
     "rjsf",
+    "SARIF",
     "vercel",
     "vite"
   ]

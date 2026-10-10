@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@ai-crew-suite/plugin-package-node": "catalog:prod",
+    "@ai-crew-suite/typescript-shared-config": "catalog:dev",
     "@backstage/backend-plugin-api": "backstage:^",
     "@backstage/integration": "backstage:^",
     "@backstage/plugin-scaffolder-node": "backstage:^",
