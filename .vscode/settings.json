@@ -1,7 +1,12 @@
 {
   "cSpell.customDictionaries": {
+    "custom-words": {
+      "name": "custom-words",
+      "path": "${workspaceFolder}/cspell.json",
+      "addWords": true
+    },
     "org-words": {
-      "path": "./.cspell/shared.txt",
+      "path": "${workspaceFolder}/.cspell/shared.txt",
       "addWords": false
     }
   },
@@ -32,14 +37,5 @@
       "master-catalogs.yml"
     ]
   },
-  "yaml.validate": true,
-  "cSpell.words": [
-    "FINRA",
-    "jiti",
-    "jsdom",
-    "rjsf",
-    "SARIF",
-    "vercel",
-    "vite"
-  ]
+  "yaml.validate": true
 }
